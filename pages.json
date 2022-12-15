@@ -12,6 +12,18 @@
     "path": "pages/my/my",
     "style": {}
   }],
+  "subPackages": [{
+    "root": "subpkg",
+    "pages": [{
+                    "path" : "goods_detail/goods_detail",
+                    "style" : {}
+                }
+                ,{
+                    "path" : "goods_list/goods_list",
+                    "style" : {}
+                }
+            ]
+  }],
   "globalStyle": {
     "navigationBarTextStyle": "white",
     // 小程序名字
@@ -21,7 +33,7 @@
     "backgroundColor": "#FFFFFF"
   },
   "tabBar": {
-    "selectedColor":"#c00000",
+    "selectedColor": "#c00000",
     "list": [{
         "pagePath": "pages/home/home",
         "text": "首页",
