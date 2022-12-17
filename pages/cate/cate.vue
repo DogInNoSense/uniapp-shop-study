@@ -1,5 +1,8 @@
 <template>
   <view>
+      <!-- 使用自定义的搜索组件 -->
+      <!-- <my-search :bgcolor="'pink'" :radius="3"></my-search> -->
+      <my-search @click="gotoSearch"></my-search>
     <view class="scroll-view-container">
       <!-- 左侧的滑动区域 -->
       <scroll-view class="left-scroll-view" scroll-y="true" :style="{height: wh + 'px'}">
@@ -52,7 +55,7 @@
       //  拿到当前设备信息
       const sysInfo = uni.getSystemInfoSync()
       // console.log(sysInfo)
-      this.wh = sysInfo.windowHeight
+      this.wh = sysInfo.windowHeight - 50
 
       this.getCateList()
     },
@@ -80,6 +83,12 @@
       gotoGoodsList(item) {
         uni.navigateTo({
           url:'/subpkg/goods_list/goods_list?cid=' + item.cat_id
+        })
+      },
+      gotoSearch() {
+        // console.log('ok')
+        uni.navigateTo({
+          url:'/subpkg/search/search'
         })
       }
     }

@@ -81,8 +81,10 @@
 		},
 		data() {
 			return {
-				show: false,
-				showSync: false,
+				// show: false,
+				// showSync: false,
+        show: true,
+        showSync: true,
 				searchVal: ""
 			}
 		},
@@ -144,7 +146,8 @@
 		flex-direction: row;
 		position: relative;
 		padding: 16rpx;
-		background-color: #ffffff;
+    /* 搜索的默认背景颜色 */
+		background-color: #c00000;
 	}
 
 	.uni-searchbar__box {
